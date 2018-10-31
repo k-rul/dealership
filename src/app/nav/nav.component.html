@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand">{{pageTitle}}</a>
+  <ul class="nav nav-pills">
+    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/welcome']">Home</a></li>
+    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/dealership']">Dealership</a></li>
+    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/dealership-new']">New dealership</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" routerLinkActive="active" [routerLink]="['//UserLogin']"><i class="fa fa-user"></i></a></li>
+      </ul>
+  </ul>
+</nav>
+
+
+
+          <!-- <nav class="navbar navbar-dark bg-dark mb-5">
+                <a class="navbar-brand" routerLink="/"><i class="fa fa-car"></i></a>
+                <div class="navbar-expand mr-auto">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" routerLink="/">Dealership</a>
+                    <a class="nav-item nav-link active" routerLink="/">New dealership</a>
+                  </div>
+                </div>
+                <div class="navbar-expand ml-auto navbar-nav">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link" routerLink="/UserLogin">
+                      <i class="fa fa-user"></i>
+                    </a>
+                  </div>
+                </div>
+              </nav> -->

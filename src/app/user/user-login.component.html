@@ -1,0 +1,32 @@
+<div class="panel panel-custom"
+     style="border-color: #D8D8D8">
+	<div class="panel-body">
+		<div class="form-group row"
+		     style="margin-top: 12px">
+			<div class="col-sm-6 col-sm-offset-3">
+				<label for="name">Потребителско име</label>
+				<input type="text"
+				       class="form-control"
+				       required
+				       [(ngModel)]="model.username"
+				       name="username" />
+			</div>
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<label for="name">Парола</label>
+				<input type="password"
+				       class="form-control"
+				       required
+				       [(ngModel)]="model.password"
+				       name="password" />
+			</div>
+		</div>
+		<div class="form-group row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<button (click)="login()">Вход</button>
+				</div>
+			</div>
+	</div>
+</div>
+

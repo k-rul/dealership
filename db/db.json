@@ -1,0 +1,128 @@
+{
+  "dealership": [
+    {
+      "id": 1,
+      "name": "Коли на кило",
+      "active": true,
+      "ownerName": "Гошо Голфа",
+      "cars": [
+        {
+          "id": 1,
+          "model": "Golf",
+          "color": "Зилен",
+          "horsePowers": 8
+        },
+        {
+          "id": 2,
+          "model": "Трабант",
+          "color": "Син",
+          "horsePowers": 1
+        }
+      ]
+    },{
+      "id": 2,
+      "name": "Авто Морга",
+      "active": false,
+      "ownerName": "Мишо Далаверата",
+      "cars": [
+        {
+          "id": 1,
+          "model": "Шаран",
+          "color": "Сив",
+          "horsePowers": 100
+        },
+        {
+          "id": 2,
+          "model": "Шкода",
+          "color": "Розова",
+          "horsePowers": 260
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Още малко коли",
+      "active": true,
+      "ownerName": "Пешо",
+      "cars": [
+        {
+          "id": 1,
+          "model": "Ford",
+          "color": "Сив",
+          "horsePowers": 98
+        },
+        {
+          "id": 2,
+          "model": "Трабант",
+          "color": "Кафяв",
+          "horsePowers": 77
+        },
+        {
+          "id": 3,
+          "model": "Опел",
+          "color": "Червен",
+          "horsePowers": 76
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Няма нови коли",
+      "active": true,
+      "ownerName": "Някой",
+      "cars": [
+        {
+          "id": 1,
+          "model": "Лада",
+          "color": "Черен",
+          "horsePowers": 44
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 4,
+      "name": "Гошо4",
+      "age": 43,
+      "username": "gosho",
+      "password": "$2a$10$Q0V/N24K61N1Qau6NiLS9.o2FlU47SUy0cOzasd8CAKDFjdd/ukRW",
+      "salt": "$2a$10$Q0V/N24K61N1Qau6NiLS9."
+    },
+    {
+      "id": 5,
+      "name": "Гошо5",
+      "age": 43
+    },
+    {
+      "id": 6,
+      "name": "Гошо6",
+      "age": 43
+    },
+    {
+      "id": 7,
+      "name": "Гошо7",
+      "age": 43
+    },
+    {
+      "name": "Гошо10",
+      "age": 100,
+      "id": 8
+    },
+    {
+      "name": "Гошо100",
+      "age": 100,
+      "id": 9
+    },
+    {
+      "name": "Stoqn",
+      "age": "12",
+      "id": 10
+    },
+    {
+      "name": "Stefan",
+      "age": "54",
+      "id": 11
+    }
+  ]
+}

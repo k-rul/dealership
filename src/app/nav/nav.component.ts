@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class NavComponent {
-    pageTitle = `Momchil's Dealerships`;
+    pageTitle = `Dealership Catalog`;
 }

@@ -1,5 +1,6 @@
 import { OnInit, Component } from "@angular/core";
 import { DealershipService } from "../services/dealership.service";
+import { Dealership } from '../models/dealership';
 
 @Component({
     selector: 'dealership-new',

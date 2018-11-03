@@ -16,12 +16,12 @@ const routes: Routes = [
         component: DealershipComponent
     },
     {
-        path: 'dealership-new',
-        component: DealershipNewComponent
-    },
-    {
         path: 'dealership/:id',
         component: DealershipDetailsComponent
+    },
+    {
+        path: 'dealership-new',
+        component: DealershipNewComponent
     },
     {
         path: 'UserLogin',

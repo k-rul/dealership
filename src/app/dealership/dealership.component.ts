@@ -30,10 +30,6 @@ export class DealershipComponent implements OnInit {
 			}
 			);
 	}
-	clearSearch() {
-		this._listFilter = '';
-	}
-
 
 	get listFilter(): string {
 		return this._listFilter;

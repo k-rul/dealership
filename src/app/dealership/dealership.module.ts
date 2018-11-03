@@ -25,7 +25,9 @@ import { DealershipNewComponent } from './dealership-new.component';
   ],
   providers: [],
   exports: [
-    DealershipComponent
+    DealershipComponent,
+    DealershipDetailsComponent,
+    DealershipNewComponent,
   ]
 })
 export class DealershipModule { }

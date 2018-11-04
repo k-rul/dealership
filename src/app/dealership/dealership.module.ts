@@ -8,6 +8,8 @@ import { appRouting } from '../app.routing';
 import { DealershipDetailsComponent } from './dealership-details.component';
 import { IsActivePipe } from '../pipes/isActive.pipe';
 import { DealershipNewComponent } from './dealership-new.component';
+import { ChangeBackgroundDirective } from '../directives/chagne-background.directive';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -16,12 +18,14 @@ import { DealershipNewComponent } from './dealership-new.component';
     DealershipComponent,
     DealershipDetailsComponent,
     DealershipNewComponent,
-    IsActivePipe
+    IsActivePipe,
+    ChangeBackgroundDirective
   ],
   imports: [BrowserModule,
     FormsModule,
     HttpClientModule,
-    appRouting
+    appRouting,
+    CommonModule
   ],
   providers: [],
   exports: [

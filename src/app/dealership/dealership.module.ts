@@ -10,6 +10,7 @@ import { IsActivePipe } from '../pipes/isActive.pipe';
 import { DealershipNewComponent } from './dealership-new.component';
 import { ChangeBackgroundDirective } from '../directives/chagne-background.directive';
 import { CommonModule } from '@angular/common';
+import { CarComponent } from './car/car.component';
 
 
 
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     DealershipDetailsComponent,
     DealershipNewComponent,
     IsActivePipe,
-    ChangeBackgroundDirective
+    ChangeBackgroundDirective,
+    CarComponent
   ],
   imports: [BrowserModule,
     FormsModule,

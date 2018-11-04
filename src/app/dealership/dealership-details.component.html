@@ -4,33 +4,47 @@
     <div class='card-header'>
       {{dealership.name}}
     </div>
-    <div class='card-body'>
-        <div class="row">
-            <div class="form group col-sm-3">
-                <label for="name">Name:</label>
-                <input type="text"
-                    class="form-control input-sm"
-                    [(ngModel)]="dealership.name" />
-            </div>
-            
-            <div class="form group col-sm-3">
-                    <label for="ownerName">Owner Name</label>
+        <div class='card-body'>
+            <div class="row">
+                <div class="form group col-sm-3">
+                    <label for="name">Name:</label>
                     <input type="text"
                         class="form-control input-sm"
-                        [(ngModel)]="dealership.ownerName"
-                        [changeBackground] = "'red'"/>
-            </div>
-                
-            <div class="form group col-sm-2">
-                    <label for="active">Is Active</label>
-                    <input type="checkbox"
-                        class="form-control input-sm"
-                        [(ngModel)]="dealership.active"/>
+                        [(ngModel)]="dealership.name" />
                 </div>
-            
-            <div class="form group col-sm-5">
-                    <button style="margin-top: 20px" (click)="Save()"><span class="fa fa-save"></span> Save</button>
+                
+                <div class="form group col-sm-3">
+                        <label for="ownerName">Owner Name</label>
+                        <input type="text"
+                            class="form-control input-sm"
+                            [(ngModel)]="dealership.ownerName"
+                            [changeBackground] = "'red'"/>
+                </div>
+                    
+                <div class="form group col-sm-2">
+                        <label for="active">Is Active</label>
+                        <input type="checkbox"
+                            class="form-control input-sm"
+                            [(ngModel)]="dealership.active"/>
+                    </div>
+                
+                <div class="form group col-sm-5">
+                        <button style="margin-top: 20px" (click)="Save()"><span class="fa fa-save"></span> Save</button>
+                </div>
+            </div>
+        
+
+        <div class='card'
+                *ngIf="dealership.cars">
+            <div class='card-header'>
+                    Cars
+            </div>
+            <div class='card-body'>
+  
+                    <car-component [cars] = 'dealership.cars'></car-component>
+               
             </div>
         </div>
-    </div>
+</div>
+
 </div>

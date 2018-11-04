@@ -1,0 +1,28 @@
+<div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Horse powers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let car of cars'>
+                    <td>
+                            {{car.id}}
+                        </td>
+                        <td>
+                            {{car.model}}
+                        </td>
+                        <td>
+                            {{car.color}}
+                        </td>
+                        <td>
+                            {{car.horsePowers}}
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+</div>

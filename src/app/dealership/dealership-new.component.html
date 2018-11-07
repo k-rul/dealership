@@ -18,7 +18,9 @@
                 <label for="ownerName">Owner Name</label>
                 <input type="text"
                         class="form-control input-sm"
-                        [(ngModel)]="dealership.ownerName"/>
+                        [(ngModel)]="dealership.ownerName"
+                        changeBackground
+                        [elementValue]="dealership.ownerName"/>
         </div>
                 
                 <div class="form group col-sm-2">

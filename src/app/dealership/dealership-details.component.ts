@@ -13,6 +13,8 @@ import { DealershipService } from '../services/dealership.service';
 export class DealershipDetailsComponent implements OnInit {
 
     dealership: Dealership;
+    
+    isEditMode = false;
 
     constructor(private router: Router, private dealershipResource: DealershipService,
         private route: ActivatedRoute) {
@@ -25,5 +27,25 @@ export class DealershipDetailsComponent implements OnInit {
             .subscribe(res => this.dealership = res);
     }
 
+    edit() {
+		this.isEditMode = true;
+		this.dealership['originalDealership'] = JSON.parse(JSON.stringify(this.dealership));
+    }
+    
+    save() {
+        this.dealership['originalDealership'] = undefined;
+       
+		this.dealershipResource.editDalership(this.dealership.id, this.dealership)
+			.subscribe(res => this.dealership = res);
+    }
+    
+    backToDealerships() {
+		return this.router.navigate(['/dealership']);
+    }
+    
+    cancel() {
+		this.isEditMode = false;
+		this.dealership = this.dealership['originalDealership'];
+	}
 
 }

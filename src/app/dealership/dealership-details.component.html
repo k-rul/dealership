@@ -6,33 +6,42 @@
     </div>
         <div class='card-body'>
             <div class="row">
-                <div class="form group col-sm-3">
-                    <label for="name">Name:</label>
-                    <input type="text"
-                        class="form-control input-sm"
-                        [(ngModel)]="dealership.name" />
-                </div>
-                
-                <div class="form group col-sm-3">
-                        <label for="ownerName">Owner Name</label>
-                        <input type="text"
-                            class="form-control input-sm"
-                            [(ngModel)]="dealership.ownerName"
-                            changeBackground
-                            [elementValue]="dealership.ownerName"/>
-                </div>
-                    
-                <div class="form group col-sm-2">
-                        <label for="active">Is Active</label>
-                        <input type="checkbox"
-                            class="form-control input-sm"
-                            [(ngModel)]="dealership.active"/>
-                    </div>
-                
-                <div class="form group col-sm-5">
-                        <button style="margin-top: 20px" (click)="Save()"><span class="fa fa-save"></span> Save</button>
-                </div>
+            <div class="form group col-sm-4">
+                <label for="name">Name:</label>
+                <input type="text"
+                    class="form-control input-sm"
+                    [(ngModel)]="dealership.name"
+                    [disabled]="!isEditMode" />
             </div>
+            <div class="form group col-sm-4">
+                <label for="ownerName">Owner Name</label>
+                <input type="text"
+                    class="form-control input-sm"
+                    [(ngModel)]="dealership.ownerName"
+                    [disabled]="!isEditMode"
+                    changeBackground
+                    [elementValue]="dealership.ownerName"/>
+            </div>
+            
+            <div class="form group col-sm-4">
+                    <button (click)="backToDealerships()"><span class="fa fa-undo"></span> Обратно</button>
+            </div>
+            </div>
+        <div class="row">
+            <div class="form group col-sm-2"
+                *ngIf="!isEditMode">
+                <button (click)="edit()">Редакция</button>
+            </div>
+            <div class="form group col-sm-6"
+                *ngIf="isEditMode">
+                <button (click)="save()">Запис</button>
+            </div>
+            <div class="form group col-sm-6"
+                *ngIf="isEditMode">
+                <button (click)="cancel()">Отказ</button>
+            </div>
+        </div>
+
         
 
         <div class='card'

@@ -1,12 +1,26 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
   <a class="navbar-brand">{{pageTitle}}</a>
   <ul class="nav nav-pills">
-    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/welcome']">Home</a></li>
-    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/dealership']">Dealerships</a></li>
-    <li><a class="nav-link" routerLinkActive="active" [routerLink]="['/dealership-new']">New dealership</a></li>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="nav-link" routerLinkActive="active" [routerLink]="['//UserLogin']"><i class="fa fa-user"></i></a></li>
-      </ul>
+    <li><a class="nav-link"
+      routerLinkActive="active"
+      [routerLink]="['/welcome']">Home</a></li>
+
+    <li><a class="nav-link"
+      routerLinkActive="active"
+      [routerLink]="['/dealership']">Dealerships</a></li>
+
+    <li><a class="nav-link"
+      routerLinkActive="active"
+      [routerLink]="['/dealership-new']">New dealership</a></li>
+      
+      <div class="navbar-expand ml-auto navbar-nav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" routerLink="/UserLogin">
+              <!-- <i class="fa fa-user"></i> -->
+              {{userName}}
+            </a>
+          </div>
+        </div>
   </ul>
 </nav>
 

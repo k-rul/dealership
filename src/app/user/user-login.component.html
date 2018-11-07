@@ -4,7 +4,7 @@
 		<div class="form-group row"
 		     style="margin-top: 12px">
 			<div class="col-sm-6 col-sm-offset-3">
-				<label for="name">Потребителско име</label>
+				<label for="name">User name</label>
 				<input type="text"
 				       class="form-control"
 				       required
@@ -14,7 +14,7 @@
 		</div>
 		<div class="form-group row">
 			<div class="col-sm-6 col-sm-offset-3">
-				<label for="name">Парола</label>
+				<label for="name">Password</label>
 				<input type="password"
 				       class="form-control"
 				       required
@@ -23,10 +23,12 @@
 			</div>
 		</div>
 		<div class="form-group row">
-				<div class="col-sm-6 col-sm-offset-3">
-					<button (click)="login()">Вход</button>
+				<div class="col-sm-6 col-sm-offset-1">
+					<button (click)="login()">Login</button>
+					<button (click)="login()" style="margin-left: 40px;">New User</button>
+					<button (click)="logout()" style="margin-left: 40px;">Logout</button>
 				</div>
-			</div>
+		</div>
 	</div>
 </div>
 

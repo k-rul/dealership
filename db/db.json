@@ -140,21 +140,7 @@
       "id": 13,
       "name": "Няма нови коли",
       "active": true,
-      "ownerName": "Някой",
-      "cars": [
-        {
-          "id": 1,
-          "model": "Лада",
-          "color": "Черен",
-          "horsePowers": 44
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "name": "Няма нови коли",
-      "active": true,
-      "ownerName": "Някой",
+      "ownerName": "Някойее",
       "cars": [
         {
           "id": 1,

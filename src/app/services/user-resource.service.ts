@@ -3,9 +3,7 @@ import { Observable } from "rxjs";
 import { User } from "../models/user";
 import { HttpClient } from "@angular/common/http";
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class UserResourceService {
 
     private restApi = 'http://localhost:3000/';
@@ -49,6 +47,7 @@ export class UserResourceService {
         return this.httpClient.get<User[]>(this.restApi + '?username=' + username
         + '&password=' + password);
     }
+    
 
 
 }

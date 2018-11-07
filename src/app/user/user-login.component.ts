@@ -3,17 +3,21 @@ import { UserResourceService } from "../services/user-resource.service";
 import { User } from "../models/user";
 import * as bcrypt from "bcryptjs";
 import { Router } from "@angular/router";
+import { SaltService } from "../services/salt.service";
+import { AuthenticationService } from "../services/authentication.service";
 
 @Component({
     selector: 'user-login',
     templateUrl: 'user-login.component.html',
-    providers: [UserResourceService]
+    providers:[
+        UserResourceService
+    ]
 })
 
 export class UserLoginComponent {
     model = new User();
 
-    constructor(private userResource: UserResourceService, private router: Router) {
+    constructor(private userResource: UserResourceService, private router: Router, private authenticationService: AuthenticationService) {
         userResource.init('users');
     }
 
@@ -21,12 +25,14 @@ export class UserLoginComponent {
         this.userResource.getCurrentUser(this.model.username)
             .subscribe(res => {
                 if (res[0]) {
+                    this.authenticationService.login(res[0].username);
+
                     const hashPass = bcrypt.hashSync(this.model.password, res[0].salt);
                     this.userResource.loginUser(this.model.username, hashPass)
                         .subscribe(hashRes => {
                             if (hashRes[0]) {
                                 localStorage.setItem('userName', this.model.username);
-                                return this.router.navigate(['/users']);
+                                return this.router.navigate(['/dealership']);
                             }else {
                                 alert("Грешен username или password");
                             }
@@ -36,4 +42,12 @@ export class UserLoginComponent {
                 }
             });
     }
+
+    logout() {
+        localStorage.removeItem('userName');
+        
+        this.authenticationService.login('');
+
+		return this.router.navigate(['/UserLogin']);
+	}
 }

@@ -10,6 +10,8 @@ import { Dealership } from '../models/dealership';
 
 export class DealershipNewComponent implements OnInit {
 
+    dealership:Dealership = new Dealership();
+    
     ngOnInit(): void {
 
     }

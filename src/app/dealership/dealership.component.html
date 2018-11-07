@@ -26,12 +26,13 @@
               <th>Name</th>
               <th>Owner Name</th>
               <th>Active</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor='let dealership of filteredDealerships | isActive'>
               <td>
-                <a class="btn btn-primary btn-sm" [routerLink]="['/dealership', dealership.id]">
+                <a class="btn btn-info btn-sm" [routerLink]="['/dealership', dealership.id]">
                     <span class="fa fa-info"></span>
                 </a>
               </td>
@@ -50,7 +51,10 @@
                     <i *ngIf="!dealership.active" class="fa fa-toggle-off"></i>
                 </td>
               <td>
-              
+                  <button class="btn btn-danger btn-sm"
+                          (click)="deleteDalership(dealership.id)">
+                    <span class="fa fa-close"></span>
+                </button>
                 
               </td>
             </tr>

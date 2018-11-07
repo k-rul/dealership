@@ -42,7 +42,26 @@ export class DealershipComponent implements OnInit {
 	performFilter(filterBy: string): Dealership[] {
 		filterBy = filterBy.toLocaleLowerCase();
 		return this.dealerships.filter((dealership: Dealership) =>
-			dealership.name.toLocaleLowerCase().indexOf(filterBy) !== -1);
+			(dealership.name.toLocaleLowerCase().indexOf(filterBy) !== -1) 
+			&& dealership.active == true);
+	}
+
+	deleteDalership(id: number): void {
+		this.dealershipResource.deleteDalershipById(id)
+			.subscribe(
+				() => {
+					//  debugger;
+					// let index: number = this.dealerships.findIndex(dealership => dealership.id === id);
+
+					// this.dealerships.splice(index, 1);
+
+					// this.filteredDealerships = this._listFilter ? this.performFilter(this._listFilter) : this.dealerships;
+
+					this.ngOnInit();
+
+					this.filteredDealerships = this._listFilter ? this.performFilter(this._listFilter) : this.dealerships;
+				}
+			);
 	}
 
 

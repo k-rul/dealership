@@ -32,5 +32,9 @@ export class DealershipService {
         return this.httpClient.get<Dealership[]>(getAllUrl);
     }
 
+    deleteDalershipById(id: number): Observable<void>{
+        return this.httpClient.delete<void>(this.restApi + '/' + id);
+    }
+
 
 }

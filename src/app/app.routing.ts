@@ -5,6 +5,7 @@ import { UserLoginComponent } from './user/user-login.component';
 import { DealershipDetailsComponent } from './dealership/dealership-details.component';
 import { DealershipNewComponent } from './dealership/dealership-new.component';
 import { WelcomeComponent } from './home/welcome.component';
+import { UserNewComponent } from './user/user-new.component';
 
 const routes: Routes = [
     {
@@ -26,6 +27,10 @@ const routes: Routes = [
     {
         path: 'UserLogin',
         component: UserLoginComponent
+    },
+    {
+        path: 'UserNew',
+        component: UserNewComponent
     },
     {
         path: '',

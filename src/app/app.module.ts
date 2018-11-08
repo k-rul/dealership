@@ -9,13 +9,15 @@ import { DealershipModule } from './dealership/dealership.module';
 import { NavComponent } from './nav/nav.component';
 import { UserLoginComponent } from './user/user-login.component';
 import { WelcomeComponent } from './home/welcome.component';
+import { UserNewComponent } from './user/user-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     UserLoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    UserNewComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,47 @@
+<div class='card'>
+		<div class='card-header'>
+		Logid
+		</div>
+
+		<div class='card-body'>
+			<div class="panel panel-custom"
+			style="border-color: #D8D8D8">
+				<div class="panel-body">
+
+
+				<div class="form group col-sm-6">
+					<label for="name">Name:</label>
+					<input type="text"
+						class="form-control input-sm"
+						[(ngModel)]="user.name" />
+				</div>
+				<div class="form group col-sm-6">
+					<label for="age">Age:</label>
+					<input type="text"
+						class="form-control input-sm"
+						[(ngModel)]="user.age" />
+				</div>
+				<div class="form group col-sm-6">
+						<label for="username">Username:</label>
+						<input type="text"
+							class="form-control input-sm"
+							[(ngModel)]="user.username" />
+				</div>
+				<div class="form group col-sm-6">
+						<label for="password">Password:</label>
+						<input type="password"
+							class="form-control input-sm"
+							[(ngModel)]="user.password" />
+				</div>
+
+					
+				<div class="form-group row">
+				<div class="col-sm-6 col-sm-offset-1" style="margin-top: 20px">
+					<button (click)="save()">Запис</button>
+					<button (click)="backToLogin()" style="margin-left: 40px;"><span class="fa fa-undo"></span> Обратно</button>
+				</div>
+				</div>
+				</div>
+		</div>
+	</div>
+</div>

@@ -208,6 +208,14 @@
       "name": "Stefan",
       "age": "54",
       "id": 11
+    },
+    {
+      "name": "toto",
+      "age": "3",
+      "username": "toto",
+      "password": "$2a$10$RRdQKxKSdCtkoHmHHmokSeIIgKT0Wy5T9ef0AA8IWREZdlmTErdQK",
+      "salt": "$2a$10$RRdQKxKSdCtkoHmHHmokSe",
+      "id": 13
     }
   ]
 }

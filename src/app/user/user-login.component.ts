@@ -3,7 +3,6 @@ import { UserResourceService } from "../services/user-resource.service";
 import { User } from "../models/user";
 import * as bcrypt from "bcryptjs";
 import { Router } from "@angular/router";
-import { SaltService } from "../services/salt.service";
 import { AuthenticationService } from "../services/authentication.service";
 
 @Component({
@@ -25,13 +24,15 @@ export class UserLoginComponent {
         this.userResource.getCurrentUser(this.model.username)
             .subscribe(res => {
                 if (res[0]) {
-                    this.authenticationService.login(res[0].username);
 
                     const hashPass = bcrypt.hashSync(this.model.password, res[0].salt);
                     this.userResource.loginUser(this.model.username, hashPass)
                         .subscribe(hashRes => {
                             if (hashRes[0]) {
                                 localStorage.setItem('userName', this.model.username);
+
+                                this.authenticationService.login(res[0].username);
+
                                 return this.router.navigate(['/dealership']);
                             }else {
                                 alert("Грешен username или password");

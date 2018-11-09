@@ -38,6 +38,10 @@ export class DealershipService {
     
     editDalership(id: number, dealership: Dealership): Observable<Dealership> {
 		return this.httpClient.put<Dealership>(this.restApi + '/' + id, dealership);
-	}
+    }
+    
+    saveDealership(dealership: Dealership): Observable<Dealership>{
+        return this.httpClient.post<Dealership>(this.restApi, dealership);
+    }
 
 }

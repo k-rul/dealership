@@ -1,6 +1,7 @@
 import { OnInit, Component } from "@angular/core";
 import { DealershipService } from "../services/dealership.service";
 import { Dealership } from '../models/dealership';
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: 'dealership-new',
@@ -8,16 +9,28 @@ import { Dealership } from '../models/dealership';
     providers: [DealershipService]
 })
 
-export class DealershipNewComponent implements OnInit {
+export class DealershipNewComponent {
 
-    dealership:Dealership = new Dealership();
-    
-    ngOnInit(): void {
+    dealership: Dealership = new Dealership();
 
+    isEditMode = true;
+
+    constructor(private router: Router, private dealershipResource: DealershipService,
+        private route: ActivatedRoute) {
+        dealershipResource.init('Dealership');
+        this.dealership.ownerName = '';
     }
 
-    Create(): void {
 
+    Create(): void {
+        this.isEditMode = false;
+
+        this.dealershipResource.saveDealership(this.dealership)
+            .subscribe(res => this.dealership = res);
+    }
+
+    backToDealerships() {
+        return this.router.navigate(['/dealership']);
     }
 
 }

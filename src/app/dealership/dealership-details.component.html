@@ -22,23 +22,31 @@
                     changeBackground
                     [elementValue]="dealership.ownerName"/>
             </div>
+            <div class="form group col-sm-2">
+                    <label for="active">Is Active</label>
+                    <input type="checkbox"
+                            class="form-control input-sm"
+                            [(ngModel)]="dealership.active"
+                            [disabled]="!isEditMode"/>
+            </div>
             
-            <div class="form group col-sm-4">
+            </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="form group col-sm-2">
                     <button (click)="backToDealerships()">
                         <span class="fa fa-undo"></span> Обратно
                     </button>
             </div>
-            </div>
-        <div class="row">
             <div class="form group col-sm-2"
                 *ngIf="!isEditMode">
                 <button (click)="edit()">Редакция</button>
             </div>
-            <div class="form group col-sm-6"
+
+            <div class="form group col-sm-2"
                 *ngIf="isEditMode">
                 <button (click)="save()">Запис</button>
             </div>
-            <div class="form group col-sm-6"
+            <div class="form group col-sm-2"
                 *ngIf="isEditMode">
                 <button (click)="cancel()">Отказ</button>
             </div>

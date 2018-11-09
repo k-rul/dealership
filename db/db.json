@@ -83,7 +83,7 @@
     {
       "id": 5,
       "name": "Няма нови коли",
-      "active": true,
+      "active": false,
       "ownerName": "Някой",
       "cars": [
         {

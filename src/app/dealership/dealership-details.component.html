@@ -33,22 +33,26 @@
             </div>
         <div class="row" style="margin-top: 20px">
             <div class="form group col-sm-2">
-                    <button (click)="backToDealerships()">
+                    <button class="btn btn-dark"
+                            (click)="backToDealerships()">
                         <span class="fa fa-undo"></span> Обратно
                     </button>
             </div>
             <div class="form group col-sm-2"
                 *ngIf="!isEditMode">
-                <button (click)="edit()">Редакция</button>
+                <button class="btn btn-primary"
+                        (click)="edit()"> Редакция</button>
             </div>
 
             <div class="form group col-sm-2"
                 *ngIf="isEditMode">
-                <button (click)="save()">Запис</button>
+                <button class="btn btn-primary"
+                        (click)="save()"> Запис</button>
             </div>
             <div class="form group col-sm-2"
                 *ngIf="isEditMode">
-                <button (click)="cancel()">Отказ</button>
+                <button class="btn btn-primary"
+                        (click)="cancel()"> Отказ</button>
             </div>
         </div>
 

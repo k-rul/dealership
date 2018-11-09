@@ -22,11 +22,12 @@ export class DealershipNewComponent {
     }
 
 
-    Create(): void {
-        this.isEditMode = false;
+    create(): void {
 
         this.dealershipResource.saveDealership(this.dealership)
-            .subscribe(res => this.dealership = res);
+            .subscribe(() => {
+                return this.backToDealerships();
+            });
     }
 
     backToDealerships() {

@@ -35,7 +35,7 @@ export class DealershipService {
     deleteDalershipById(id: number): Observable<void>{
         return this.httpClient.delete<void>(this.restApi + '/' + id);
     }
-    
+
     editDalership(id: number, dealership: Dealership): Observable<Dealership> {
 		return this.httpClient.put<Dealership>(this.restApi + '/' + id, dealership);
     }

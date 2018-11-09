@@ -24,6 +24,7 @@ export class DealershipComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		debugger;
 		this.dealershipResource.getAllDealerships()
 			.subscribe(dealerships => {
 				this.dealerships = dealerships;

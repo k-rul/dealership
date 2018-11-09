@@ -98,7 +98,7 @@
       "id": 6,
       "name": "Няма нови коли",
       "active": true,
-      "ownerName": "Някой",
+      "ownerName": "Някойсцз",
       "cars": [
         {
           "id": 1,
@@ -109,18 +109,9 @@
       ]
     },
     {
-      "id": 11,
-      "name": "Няма нови коли",
-      "active": true,
-      "ownerName": "Някой",
-      "cars": [
-        {
-          "id": 1,
-          "model": "Лада",
-          "color": "Черен",
-          "horsePowers": 44
-        }
-      ]
+      "ownerName": "ьз",
+      "name": "асдсад",
+      "id": 7
     }
   ],
   "users": [
@@ -174,6 +165,14 @@
       "password": "$2a$10$RRdQKxKSdCtkoHmHHmokSeIIgKT0Wy5T9ef0AA8IWREZdlmTErdQK",
       "salt": "$2a$10$RRdQKxKSdCtkoHmHHmokSe",
       "id": 13
+    },
+    {
+      "name": "11",
+      "age": "11",
+      "username": "11",
+      "password": "$2a$10$TeNF/Uj4fmUpAsKIKTGo3OW9n95Pwzwok0vq4mm4llJwHQjnwJtqC",
+      "salt": "$2a$10$TeNF/Uj4fmUpAsKIKTGo3O",
+      "id": 14
     }
   ]
 }

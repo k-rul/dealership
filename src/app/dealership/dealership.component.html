@@ -5,9 +5,17 @@
     <div class='card-body'>
       <div class='row'>
         <div class='col-md-2'>Filter by:</div>
-        <div class='col-md-4'>
+        <div class='col-md-6'>
           <input type='text'
-                 [(ngModel)]='listFilter' />
+                 [(ngModel)]='listFilter' />            
+        </div>
+        <div class='col-md-1'>
+            <label for="active">Show all</label>
+        </div>
+        <div class='col-md-1'>
+            <input type="checkbox"
+                    class="form-control input-sm"
+                    [(ngModel)]="_showAll"/>
         </div>
       </div>
       <div class='row'
@@ -30,7 +38,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor='let dealership of filteredDealerships | isActive'>
+            <tr *ngFor='let dealership of filteredDealerships | isActive: _showAll'>
               <td>
                 <a class="btn btn-info btn-sm" [routerLink]="['/dealership', dealership.id]">
                     <span class="fa fa-info"></span>

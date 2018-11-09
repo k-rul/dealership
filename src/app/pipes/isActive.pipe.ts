@@ -6,7 +6,10 @@ import { Dealership } from "../models/dealership";
 })
 
 export class IsActivePipe implements PipeTransform {
-    transform(items: Array<Dealership>): Array<Dealership> {
+    transform(items: Array<Dealership>, filter: boolean): Array<Dealership> {
+        if (filter) {
+            return items;
+        }
         if (!items) {
             return [];
         }

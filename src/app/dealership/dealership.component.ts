@@ -16,6 +16,7 @@ export class DealershipComponent implements OnInit {
 	filteredDealerships: Dealership[] = [];
 	dealerships: Dealership[] = [];
 	_listFilter: string;
+	_showAll: Boolean = true;
 
 	constructor(private dealershipResource: DealershipService) {
 
